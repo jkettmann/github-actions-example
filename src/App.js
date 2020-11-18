@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
+// this should throw a lint error
+const a
+
 function App() {
   return (
     <div className="App">
