@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install
+      run: yarn install
+
+    - name: Lint
+      run: yarn lint
+
+    - name: Tests
+      run: yarn test
+
+    - name: Build
+      run: yarn build
